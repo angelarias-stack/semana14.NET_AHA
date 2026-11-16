@@ -1,0 +1,12 @@
+C:\Users\Tecsup\Downloads\folder AHA\lab2tarea-Ariass.exe
+C:\Users\Tecsup\Downloads\folder AHA\appsettings.Development.json
+C:\Users\Tecsup\Downloads\folder AHA\appsettings.json
+C:\Users\Tecsup\Downloads\folder AHA\lab2tarea-Ariass.dll
+C:\Users\Tecsup\Downloads\folder AHA\lab2tarea-Ariass.deps.json
+C:\Users\Tecsup\Downloads\folder AHA\lab2tarea-Ariass.runtimeconfig.json
+C:\Users\Tecsup\Downloads\folder AHA\lab2tarea-Ariass.pdb
+C:\Users\Tecsup\Downloads\folder AHA\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Tecsup\Downloads\folder AHA\Microsoft.OpenApi.dll
+C:\Users\Tecsup\Downloads\folder AHA\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Tecsup\Downloads\folder AHA\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Tecsup\Downloads\folder AHA\Swashbuckle.AspNetCore.SwaggerUI.dll
