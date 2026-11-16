@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lab2tarea-Ariass")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3338c66cfcac47a0b796d47009e0c5ce78a2b245")]
 [assembly: System.Reflection.AssemblyProductAttribute("lab2tarea-Ariass")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lab2tarea-Ariass")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,32 +1,37 @@
+using lab2tarea_Ariass.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Conexión a PostgreSQL
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 var app = builder.Build();
 
-
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// 1. Crear las tablas y datos iniciales automáticamente en PostgreSQL al iniciar
+using (var scope = app.Services.CreateScope())
 {
-    app.MapOpenApi();
-    
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Lab v1");
-        c.RoutePrefix = string.Empty; // Abre Swagger directamente al iniciar
-    });
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.EnsureCreated();
 }
 
-app.UseHttpsRedirection();
+// 2. Habilitar Swagger en cualquier entorno (incluyendo Production en Render)
+app.MapOpenApi();
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Lab v1");
+    c.RoutePrefix = string.Empty; // Abre Swagger directamente al entrar a la URL principal
+});
 
+// 3. No se usa UseHttpsRedirection() porque Render gestiona el HTTPS externamente
 app.MapControllers();
 
 var summaries = new[]
